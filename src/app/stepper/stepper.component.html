@@ -1,0 +1,29 @@
+<mat-stepper>
+    <mat-step>1</mat-step>
+    <mat-step>2</mat-step>
+    <mat-step>3</mat-step>
+</mat-stepper>
+<h1>stepper lazy content rendering</h1>
+<mat-stepper orientation="vertical">
+    <mat-step>
+      <ng-template matStepLabel>Step 1</ng-template>
+      <ng-template matStepContent>
+        <p>This content was rendered lazily</p>
+        <button mat-button matStepperNext>Next</button>
+      </ng-template>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Step 2</ng-template>
+      <ng-template matStepContent>
+        <p>This content was also rendered lazily</p>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </ng-template>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Step 3</ng-template>
+      <p>This content was rendered eagerly</p>
+      <button mat-button matStepperPrevious>Back</button>
+    </mat-step>
+  </mat-stepper>
+  <button mat-stroked-button color="warn" [routerLink]="['/sidenav']">go to sidenav</button>

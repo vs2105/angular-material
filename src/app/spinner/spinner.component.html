@@ -1,0 +1,31 @@
+<div>
+    <mat-spinner>
+
+    </mat-spinner>
+</div>
+<hr>
+ <h3>Input value binded spinner</h3>
+<mat-progress-spinner [value]="spinnerpercent">
+
+</mat-progress-spinner>
+<hr>
+<h3 class="heading">mat progress bar</h3>
+<mat-progress-bar mode="determinate" [value]="progresspercent" color="warn">
+
+</mat-progress-bar>
+<hr>
+<mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
+<hr>
+<mat-progress-bar mode="query"></mat-progress-bar>
+<hr>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter spinner value</mat-label>
+      <input matInput (input)="enterdvalue($event)">
+      <mat-hint>enter value to show spinner progress</mat-hint>
+    </mat-form-field>
+ </form>  
+
+
+<button mat-raised-button color="warn" [routerLink]="['/menu']" style="margin: 50px;">go to menu</button>
+

@@ -1,0 +1,42 @@
+<h3 class="heading">Button toggle</h3>
+
+<h4>single selection</h4>
+<mat-button-toggle-group  appearance="legacy" class="mat"  #group="matButtonToggleGroup" 
+(click)="tglval(group)" name="fontStyle" aria-label="Font Style" value="All">
+    <mat-button-toggle value="Home" >Home</mat-button-toggle>
+    <mat-button-toggle value="office" >office</mat-button-toggle>
+    <mat-button-toggle value="hybrid" >hybrid</mat-button-toggle>
+</mat-button-toggle-group>
+
+
+<h4>multiple selection</h4>
+<mat-button-toggle-group class="mat"  value="all" #group1="matButtonToggleGroup" (click)="toggleval(group1)" multiple>
+    <mat-button-toggle value="red">red</mat-button-toggle>
+    <mat-button-toggle value="green" >green</mat-button-toggle>
+    <mat-button-toggle value="orange" >orange</mat-button-toggle>
+    <mat-button-toggle value="yellow" >yellow</mat-button-toggle>
+
+
+</mat-button-toggle-group>
+
+<h4>Exclusive selection</h4>
+<mat-button-toggle-group class="mat" #group2="matButtonToggleGroup"
+>
+    <mat-button-toggle value="left" aria-label="Text align left">
+        <mat-icon>format_align_left</mat-icon>
+      </mat-button-toggle>
+      <mat-button-toggle value="right" aria-label="Text align left">
+        <mat-icon>format_align_right</mat-icon>
+      </mat-button-toggle>
+      <mat-button-toggle value="justify" aria-label="Text align left">
+        <mat-icon>format_align_justify</mat-icon>
+      </mat-button-toggle>
+</mat-button-toggle-group>
+<div class="Selected-val">Selected value: {{group2.value}}</div>
+<hr>
+
+    <button mat-raised-button color="accent" class="mat" (click)="gotoicons()" >go to icons</button>
+
+
+
+

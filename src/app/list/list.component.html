@@ -1,0 +1,47 @@
+<mat-list>
+    <div mat-subheader>Folders</div>
+    <mat-list-item *ngFor="let folder of folders">
+        <mat-icon matListItemIcon >{{folder.icon}}</mat-icon>
+        <div matListItemTitle >{{folder.name}}</div>
+        <div matListItemLine >{{folder.updated | date}}</div> 
+    </mat-list-item>
+</mat-list>
+<mat-divider></mat-divider>
+
+<mat-list role="list">
+    <mat-list-item role="listitem">Item 1</mat-list-item>
+    <mat-list-item role="listitem">Item 2</mat-list-item>
+    <mat-list-item role="listitem">Item 3</mat-list-item>
+  </mat-list>
+  <mat-divider></mat-divider>
+
+  <mat-selection-list #shoes>
+    <mat-list-option *ngFor="let shoe of typesOfShoes">
+      {{shoe}}
+    </mat-list-option>
+  </mat-selection-list>
+  <span>
+    Options selected: {{shoes.selectedOptions.selected.length}}
+  </span>
+
+<mat-divider></mat-divider>
+ <h3>Three line lists</h3>
+<mat-list>
+  <mat-list-item>
+    <span matListItemTitle>Title</span>
+    <span matListItemLine>Second line</span>
+    <span matListItemLine>Third line</span>
+  </mat-list-item>
+  <mat-list-item>
+    <span matListItemTitle>Title</span>
+    <span matListItemLine>Second line. This line will truncate.</span>
+    <span>Third line</span>
+  </mat-list-item>
+  <mat-list-item>
+    <span matListItemTitle>Title</span>
+    <span matListItemLine>Second line. This line will truncate.</span>
+    Third line
+  </mat-list-item>
+</mat-list>
+  <mat-divider></mat-divider>
+<button style="margin: 24px;" mat-raised-button color="primary" [routerLink]="['/select']">go to select</button>

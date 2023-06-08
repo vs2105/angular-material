@@ -1,0 +1,12 @@
+<mat-tab-group headerPosition="below" fitInkBarToContent>
+    <mat-tab label="First"> Content 1 </mat-tab>
+    <mat-tab label="Second"> Content 2 </mat-tab>
+    <mat-tab label="Third"> Content 3 </mat-tab>
+</mat-tab-group>
+<mat-divider></mat-divider>
+<mat-tab-group>
+    <mat-tab [label]="season" *ngFor="let season of seasons">{{season}}</mat-tab>
+
+</mat-tab-group>
+<hr>
+<button mat-raised-button color="accent" [routerLink]="['/checkbox']">move to checkbox</button>

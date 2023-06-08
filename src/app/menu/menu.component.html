@@ -1,0 +1,27 @@
+<button class="style" mat-fab color="primary" [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu>
+    <button mat-menu-item>office</button>
+    <button mat-menu-item>hybrid</button>
+    <button mat-menu-item>remote</button>
+</mat-menu>
+
+<hr>
+
+<button class="style" mat-raised-button color="accent" [matMenuTriggerFor]="animals">Animal Index</button>
+<mat-menu #animals="matMenu">
+   <button mat-menu-item [matMenuTriggerFor]="Vertebrates">Vertebrates</button>
+   <button mat-menu-item [matMenuTriggerFor]="Invertebrates">Invertebrates</button>
+</mat-menu>
+<mat-menu #Vertebrates="matMenu" >
+    <button mat-menu-item>fishes</button>
+    <button mat-menu-item>Reptilies</button>
+    <button mat-menu-item>amphibians</button>
+</mat-menu>
+<mat-menu #Invertebrates="matMenu">
+    <button mat-menu-item>Corals</button>
+    <button mat-menu-item>Crustaceans</button>
+    <button mat-menu-item>Arachnids</button>
+    <button mat-menu-item>Horseshoe crabs</button>
+</mat-menu>
+<hr>
+<button mat-raised-button color="primary" [routerLink]="['/card']">go to cards</button>

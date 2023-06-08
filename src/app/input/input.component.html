@@ -1,0 +1,33 @@
+<form class="example-form">
+   <mat-form-field class="example-full-width">
+    <mat-label>Favorite food</mat-label>
+    <input matInput [placeholder]="'Ex. Pizza'">
+    <!-- <mat-hint>Favorite food</mat-hint> -->
+   </mat-form-field>
+
+   <mat-form-field class="example-full-width">
+    <mat-label>leave a comment</mat-label>
+    <textarea matInput [placeholder]="'Ex. It makes me feel...'"></textarea>
+   </mat-form-field>
+
+   <mat-form-field class="example-full-width">
+    <mat-label>Telephone</mat-label>
+    <span matPrefix>+91 &nbsp;</span>
+    <input type="tel" matInput [placeholder]="'555-555-1234'">
+    <mat-icon  matSuffix>edit</mat-icon>
+   </mat-form-field>
+
+   <mat-form-field class="example-full-width">
+      <mat-label>Spinner input value</mat-label>
+      <input  matInput (input)="spinnerenterdvalue($event)">
+   </mat-form-field>
+
+   <mat-form-field class="example-full-width">
+      <mat-label>progress bar input value</mat-label>
+      <input  matInput (input)="progressenterdvalue($event)">
+   </mat-form-field>
+     
+</form>
+<hr>
+<button class="btn" mat-raised-button color="primary" (click)="gotobadge()">Go to badge</button>
+

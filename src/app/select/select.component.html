@@ -1,0 +1,34 @@
+<mat-form-field style="margin: 30px;" appearance="fill">
+    <mat-label>Toppings</mat-label>
+    <mat-select (selectionChange)="onmatselect($event)">
+        <mat-option *ngFor="let list of toppingList" [value]="list">{{list}}</mat-option>
+    </mat-select>
+    <mat-hint>Pizza Toppings*</mat-hint>
+</mat-form-field>
+
+<mat-divider></mat-divider>
+<mat-form-field style="margin: 30px;" appearance="outline">
+    <mat-label>Favorite food</mat-label>
+    <mat-select [(ngModel)]="selectedValue" name="food">
+      <mat-option *ngFor="let food of foods" [value]="food.value">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+    <mat-hint>Favorite food</mat-hint>
+  </mat-form-field>
+  <p> Selected food: {{selectedValue}} </p>
+  <mat-divider></mat-divider>
+
+  <mat-form-field style="margin: 30px;" appearance="outline">
+    <mat-label>State</mat-label>
+    <mat-select>
+      <mat-option>None</mat-option>
+      <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+    </mat-select>
+    <mat-hint>Choose your state</mat-hint>
+  </mat-form-field>
+
+  <mat-divider>
+  </mat-divider>
+
+  <button mat-raised-button color="warn" (click)="opendialog()">open dialog</button>

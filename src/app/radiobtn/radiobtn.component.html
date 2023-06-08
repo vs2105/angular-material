@@ -1,0 +1,23 @@
+<mat-radio-group aria-label="Select an option" color="warn">
+    <mat-radio-button value="1">Option 1</mat-radio-button>
+    <mat-radio-button value="2">Option 2</mat-radio-button>
+  </mat-radio-group>
+  <mat-divider></mat-divider>
+  <label >gender:</label>
+  <mat-radio-group  class="radiobtn" [(ngModel)]="gender" color="primary">
+    <mat-radio-button value="male">Male</mat-radio-button>
+    <mat-radio-button value="female">Female</mat-radio-button>
+    <mat-radio-button value="other">Other</mat-radio-button>
+  </mat-radio-group>
+  <p style="margin-top: 20px;">selected gender is:{{gender | titlecase}}</p>
+  <mat-divider></mat-divider>
+  <label>Pick your favorite season</label>
+  <mat-radio-group  class="radiobtn" [(ngModel)]="selectedseason" color="warn">
+    <mat-radio-button *ngFor="let seaosn of seasons" [value]="seaosn">
+      {{seaosn}}
+    </mat-radio-button>
+  </mat-radio-group>
+  <p>selected season:{{selectedseason}}</p>
+
+  <button mat-raised-button [routerLink]="['/tab']">go to tabs</button>
+
